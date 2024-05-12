@@ -1,0 +1,44 @@
+lista = [0.25, 0.32, 1.2, 4.5, 0.33, 0.75, -0.42, -0.16, -0.01, 0.2, 0.0, -2.3, -1.1, -0.2]
+n = len(lista)  #número de elementos.
+soma = sum(lista) #a soma dos mesmos.
+
+v_max = lista[0]   #o maior número da lista
+for itens in lista:
+    if itens > v_max:
+        v_max = itens
+    else:
+        pass
+        
+v_min = lista[0]   #o menor número da lista.
+for itens in lista:
+    if itens < v_min:
+        v_min = itens
+    else:
+        pass
+
+media = (soma/n) #média amostral da lista.
+
+# início dos cálculos do desvio padrão
+# (xi - x)^2
+valores = []
+for itens in lista:
+    if itens != valores:
+        valor = ((itens - media)**2) 
+        valores.append(valor)
+    else:
+        pass
+
+# somar e multiplicar por 1/n*(n-1)
+sum_xi = float(sum(valores))
+multiplicar = sum_xi * (1/(n*(n-1)))
+
+# por último, tirar a raiz quadrada e obter o desvio padrão:
+s = multiplicar**(0.5)
+
+'''RESULTADOOOOOOOOOSSSSSSSS!!!!!!!!!!!!!!!!!!'''
+print('o número de elementos é:', n)
+print('o número da soma dos elementos é:', soma)
+print('o maior número da lista é:', v_max)
+print('o maior número da lista é:', v_min)
+print('a média amostral é:', media)
+print('o desvio padrão é:', s)
