@@ -28,12 +28,12 @@ for itens in lista:
     else:
         pass
 
-# somar e multiplicar por 1/n*(n-1)
+# somar e dividir por n-1
 sum_xi = float(sum(valores))
-multiplicar = sum_xi * (1/(n*(n-1)))
+dividir = sum_xi / (n-1)
 
 # por último, tirar a raiz quadrada e obter o desvio padrão:
-s = multiplicar**(0.5)
+s = dividir**(0.5)
 
 '''RESULTADOOOOOOOOOSSSSSSSS!!!!!!!!!!!!!!!!!!'''
 print('o número de elementos é:', n)
